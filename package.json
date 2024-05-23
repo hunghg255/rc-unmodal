@@ -1,6 +1,6 @@
 {
   "name": "rc-unmodal",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A react component unified modal",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -18,7 +18,7 @@
   },
   "scripts": {
     "type-check": "tsc --noEmit",
-    "build": "bunchee",
+    "build": "bunchee --minify",
     "dev": "bunchee --watch",
     "dev:website": "turbo run dev --filter=website...",
     "format": "prettier --write ."

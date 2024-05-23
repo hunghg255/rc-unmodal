@@ -69,11 +69,9 @@ export const PresentSheet: FC<PropsWithChildren<PresentSheetProps>> = (props) =>
           style={{
             zIndex: contentZIndex,
           }}
-          className="fixed bottom-0 left-0 right-0 mt-24 flex max-h-[95vh] flex-col rounded-t-[10px] bg-white p-4 dark:bg-neutral-950"
+          className="fixed bottom-0 left-0 right-0 mt-24 flex max-h-[95vh] flex-col rounded-t-[10px] bg-white p-4"
         >
-          {dismissible && (
-            <div className="mx-auto mb-8 h-1.5 w-12 flex-shrink-0 rounded-full bg-zinc-300 dark:bg-neutral-800" />
-          )}
+          {dismissible && <div className="mx-auto mb-8 h-1.5 w-12 flex-shrink-0 rounded-full bg-zinc-300 " />}
 
           {title && <Drawer.Title className="-mt-4 mb-4 flex justify-center text-lg font-medium">{title}</Drawer.Title>}
 

@@ -207,13 +207,13 @@ export const Modal = ({
                 className={classnames(
                   ModalBEM.content,
                   'relative flex flex-col overflow-hidden rounded-lg',
-                  'bg-zinc-50/80 dark:bg-zinc-950/80',
-                  'p-2 shadow-2xl shadow-gray-300 backdrop-blur-sm dark:shadow-gray-800/50',
+                  'bg-white',
+                  'p-2 ',
                   max
                     ? 'h-[90vh] w-[90vw]'
                     : 'max-h-[70vh] min-w-[300px] max-w-[90vw] lg:max-h-[calc(100vh-20rem)] lg:max-w-[70vw]',
 
-                  'border border-slate-200 dark:border-neutral-800',
+                  'border border-slate-200 ',
                   modalClassName,
                 )}
                 onClick={stopPropagation}
@@ -221,7 +221,7 @@ export const Modal = ({
                 <Dialog.Title className={`${ModalBEM.title} flex-shrink-0 px-4 py-2 text-lg font-medium`}>
                   {title}
                 </Dialog.Title>
-                <Divider className="my-2 flex-shrink-0 border-slate-200 opacity-80 dark:border-neutral-800" />
+                <Divider className="my-2 flex-shrink-0 border-slate-200 opacity-80 " />
 
                 <div className={`${ModalBEM.children} min-h-0 flex-shrink flex-grow overflow-auto px-4 py-2`}>
                   {finalChildren}

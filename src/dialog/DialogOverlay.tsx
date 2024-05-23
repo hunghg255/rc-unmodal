@@ -16,7 +16,7 @@ export const DialogOverlay = forwardRef(
       <Dialog.Overlay asChild ref={ref}>
         <m.div
           onClick={onClick}
-          className={classNames('fixed inset-0 z-[11] bg-zinc-50/80 dark:bg-zinc-950/80', className)}
+          className={classNames('fixed inset-0 z-[11] bg-overlay', className)}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
