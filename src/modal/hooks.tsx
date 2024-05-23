@@ -1,10 +1,8 @@
-'use client';
-
 import { useCallback, useContext, useId, useRef } from 'react';
-import type { ModalProps, ModalStackOptions } from './types';
+import type { ModalProps, ModalStackOptions } from 'modal/types';
 
-import { CurrentModalContext } from './modal';
-import { useSetModalStack } from '../providers';
+import { CurrentModalContext } from 'modal/modal';
+import { useSetModalStack } from 'providers';
 
 const modalIdToPropsMap = {} as Record<string, ModalProps>;
 

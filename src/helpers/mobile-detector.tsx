@@ -1,9 +1,6 @@
-'use client';
-
 import { useEffect } from 'react';
-
-import { useIsMobile } from '../hooks/use-is-mobile.js';
-import { useSetIsMobile } from '../providers/index.js';
+import { useIsMobile } from '../hooks/use-is-mobile';
+import { useSetIsMobile } from '../providers';
 
 export const MobileDetector = () => {
   const set = useSetIsMobile();

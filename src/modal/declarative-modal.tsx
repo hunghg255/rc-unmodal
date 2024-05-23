@@ -1,6 +1,4 @@
-'use client';
-
-import React, { useId, useMemo } from 'react';
+import { useId, useMemo } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import type { FC, ReactNode } from 'react';
 import type { ModalProps } from './types';
@@ -43,7 +41,7 @@ const DeclarativeModalImpl: FC<DeclarativeModalProps> = ({ open, onOpenChange, c
   );
 };
 
-const FooterAction = ({ children, className }) => {
+const FooterAction = ({ children, className }: any) => {
   return <div className={classNames('mt-4 flex items-center justify-end gap-2', className)}>{children}</div>;
 };
 

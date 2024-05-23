@@ -1,5 +1,3 @@
-'use client';
-
 import React, { useEffect, useMemo, useState } from 'react';
 import { Drawer } from 'vaul';
 import type { FC, PropsWithChildren, ReactNode } from 'react';

@@ -1,5 +1,4 @@
 import classNames from 'classnames';
-import React from 'react';
 import type { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
 export const Divider: FC<DetailedHTMLProps<HTMLAttributes<HTMLHRElement>, HTMLHRElement>> = (props) => {

@@ -201,7 +201,7 @@ export function Hero() {
     <>
       <div className="space-y-1 mb-[20px]">
         <h2 className="text-2xl font-semibold mb-[10px]">Installation</h2>
-        <Code lang="bash">npm install rc-unmodal</Code>
+        <Code lang="bash">npm install rc-unmodal@latest</Code>
       </div>
       <div className="mb-[30px]">
         <h2 className="text-2xl font-semibold mb-[10px]">Basic Modal</h2>

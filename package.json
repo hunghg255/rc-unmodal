@@ -1,25 +1,25 @@
 {
   "name": "rc-unmodal",
-  "version": "0.0.3",
+  "version": "1.0.7",
   "description": "A react component unified modal",
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
   "files": [
     "*.css",
     "dist"
   ],
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "require": "./dist/index.js",
-      "import": "./dist/index.mjs"
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
     },
     "./style.css": "./style.css"
   },
   "scripts": {
     "type-check": "tsc --noEmit",
-    "build": "bunchee --minify",
+    "build": "rollup -c --bundleConfigAsCjs",
     "dev": "bunchee --watch",
     "dev:website": "turbo run dev --filter=website...",
     "format": "prettier --write ."
@@ -38,20 +38,27 @@
     "url": "https://github.com/hunghg255/rc-unmodal/issues"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.5",
+    "@size-limit/preset-small-lib": "^8.2.6",
     "@types/node": "20.5.7",
     "@types/react": "18.2.55",
     "@types/react-dom": "18.2.18",
-    "bunchee": "^5.1.5",
     "eslint": "^7.32.0",
     "prettier": "^2.5.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "rollup": "^3.29.4",
+    "rollup-plugin-dts": "^5.3.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
     "turbo": "1.6",
     "typescript": "5.2.2"
   },
   "peerDependencies": {
-    "react": "^16.8 || ^17.0 || ^18.0",
-    "react-dom": "^16.8 || ^17.0 || ^18.0"
+    "react": "^16.8 || ^17.0 || ^18.0 || ^19.0",
+    "react-dom": "^16.8 || ^17.0 || ^18.0 || ^19.0"
   },
   "packageManager": "pnpm@6.32.11",
   "dependencies": {
@@ -59,5 +66,10 @@
     "classnames": "^2.5.1",
     "framer-motion": "^11.2.6",
     "vaul": "^0.9.1"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all"
+  ]
 }
