@@ -3,24 +3,24 @@ import React, { createContext, createElement, Fragment, useCallback, useEffect, 
 import { useAnimationControls } from 'framer-motion';
 import type { Spring, Target } from 'framer-motion';
 import type { RefObject, SyntheticEvent } from 'react';
-import type { ModalContentPropsInternal, ModalProps } from 'modal/types';
+import type { ModalContentPropsInternal, ModalProps } from './types';
 
-import { ModalBEM } from 'modal/bem';
-import { PresentSheet } from 'sheet/Sheet';
+import { ModalBEM } from './bem';
+import { PresentSheet } from '../sheet/Sheet';
 import {
   useIsMobile,
   useModalGlobalConfigurations,
   useMotionComponent,
   useSetModalStack,
   useSheetStack,
-} from 'providers';
-import { useEventCallback } from 'hooks/use-event-callback';
-import { stopPropagation } from 'lib/dom';
-import { useIsUnMounted } from 'hooks/use-is-unmounted';
-import { DialogOverlay } from 'dialog/DialogOverlay';
+} from '../providers';
+import { useEventCallback } from '../hooks/use-event-callback';
+import { stopPropagation } from '../lib/dom';
+import { useIsUnMounted } from '../hooks/use-is-unmounted';
+import { DialogOverlay } from '../dialog/DialogOverlay';
 import classnames from 'classnames';
-import { Divider } from 'divider/Divider';
-import { CloseIcon } from 'icons/close';
+import { Divider } from '../divider/Divider';
+import { CloseIcon } from '../icons/close';
 
 const microReboundPreset: Spring = {
   type: 'spring',

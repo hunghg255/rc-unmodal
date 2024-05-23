@@ -23,7 +23,7 @@ export default [
       },
     ],
     plugins: [peerDepsExternal(), resolve(), commonjs(), typescript({ tsconfig: './tsconfig.json' }), terser()],
-    external: ['react', 'react-dom', 'framer-motion', 'vaul'],
+    external: ['react', 'react-dom', 'framer-motion', 'vaul', '@radix-ui/react-dialog'],
   },
   {
     input: './dist/esm/build/index.d.ts',
