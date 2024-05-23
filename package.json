@@ -1,6 +1,6 @@
 {
   "name": "rc-unmodal",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A react component unified modal",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -12,7 +12,8 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "default": "./dist/index.mjs"
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
     },
     "./style.css": "./style.css"
   },

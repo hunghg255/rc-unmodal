@@ -199,8 +199,12 @@ const BasicSheet = () => {
 export function Hero() {
   return (
     <>
+      <div className="space-y-1 mb-[20px]">
+        <h2 className="text-2xl font-semibold mb-[10px]">Installation</h2>
+        <Code lang="bash">npm install rc-unmodal</Code>
+      </div>
       <div className="mb-[30px]">
-        <h1 className="text-2xl font-semibold mb-[10px]">Basic Modal</h1>
+        <h2 className="text-2xl font-semibold mb-[10px]">Basic Modal</h2>
 
         <BasicModal />
 
@@ -210,7 +214,7 @@ export function Hero() {
       </div>
 
       <div className="mb-[30px]">
-        <h1 className="text-2xl font-semibold mb-[10px]">Basic Nested</h1>
+        <h2 className="text-2xl font-semibold mb-[10px]">Basic Nested</h2>
 
         <BasicNested />
 
@@ -220,7 +224,7 @@ export function Hero() {
       </div>
 
       <div className="mb-[30px]">
-        <h1 className="text-2xl font-semibold mb-[10px]">Basic Sheet</h1>
+        <h2 className="text-2xl font-semibold mb-[10px]">Basic Sheet</h2>
 
         <BasicSheet />
 
